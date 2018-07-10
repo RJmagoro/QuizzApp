@@ -1,14 +1,396 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      QUIZ APP
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+  <h1 style="font-family: cursive">Quiz Time</h1>
+  <div *ngIf="First">
+      <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDy6LqRh4sRJhQiDrc7xAXooDBok3eYLYEztZzccZkGXMvZHQt" >
+  
+    
+    
+ 
+   
+      </body> 
+  <ion-item>
+      <ion-label floating>Name</ion-label>
+          <ion-input  [(ngModel)]="name" id="name"  ></ion-input>
+         
+      </ion-item>
+      
+      <button ion-button ion-heart (click)="onStart()" round block ><ion-icon name="heart">Start</ion-icon></button>
+      
+    </div>
+    <div *ngIf="Sports">
+      <h1 id="sportss">Sports Quiz </h1>
+  <ion-list>
+      <ion-item>
+        <ion-label>1.What is the national sport in Japan</ion-label>
+        
+        <ion-select [(ngModel)]="SumoWrestling1" >
+          <ion-option  value="Jpn"  >SumoWrestling</ion-option>
+          <ion-option  value="Soccer" >Soccer</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          
+        </ion-select>
+      </ion-item>                                     
+    </ion-list>
+    <ion-list>
+        <ion-item>
+          <ion-label>2.Who Score a goal with his hand in 1986?</ion-label>
+          <ion-select [(ngModel)]="maradona1">
+            <ion-option value="yr">Ronaldo</ion-option>
+            <ion-option value="maradona" >maradona</ion-option>
+            <ion-option value="yrrs">Pele</ion-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+          <ion-item>
+            <ion-label>3.Which car won Fernando Alonso his first tittle in Formula 1 with?</ion-label>
+            <ion-select [(ngModel)]="Renault1">
+              <ion-option value="Renault" >Renault</ion-option>
+              <ion-option value="cars">VW</ion-option>
+              <ion-option value="carr">BMW</ion-option>
+              
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+              <ion-label>4.Which Year did Orlando Pirates Win The Caf Chapions?</ion-label>
+              <ion-select [(ngModel)]="pirates1">
+                <ion-option value="fot">1985</ion-option>
+                <ion-option value="pirates" >1995</ion-option>
+                <ion-option value="fote">2013</ion-option>
+                
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          
+          <ion-list>
+              <ion-item>
+                <ion-label>5.Who Score The First Goal in 2010 World Cup?</ion-label>
+                <ion-select [(ngModel)]="goal1">
+                  <ion-option value="goal" >STshabalala</ion-option>
+                  <ion-option value="starr">T.Modise</ion-option>
+                  <ion-option value="starr">Percy Tau</ion-option>
+                  
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <button ion-button color="light-dark" (click)="onSport()" round>Next</button>
+            </div>
+            <div *ngIf="Nature" id="nature">
+                <h1>Nature Quiz </h1>
+               
+              
+                    
+                    <ion-label>1.What is the largest type of shark?</ion-label>
+                
+                <ion-list radio-group [(ngModel)]="whaleshark1">
+                <ion-item>
+                  <ion-label>Whaleshark</ion-label>            
+                  <ion-radio  value="whaleshark"  ></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>White Shark</ion-label>
+                    <ion-radio value="white"></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label>Python</ion-label>
+                      <ion-radio value="python" ></ion-radio>
+                    </ion-item>
+              </ion-list>
+                
+              
+               
+            
+             
+    
+              <ion-label>2.Which planet is second closest to the sun?</ion-label>
+    
+              <ion-list radio-group [(ngModel)]="mars1">
+                        
+            <ion-item>
+                        
+              <ion-label>Mars</ion-label> 
+              <ion-radio  value="mars" ></ion-radio>
+            </ion-item>
+            
+              <ion-item>
+              <ion-label>Venus</ion-label>
+              <ion-radio value="venus"></ion-radio>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label>Earth</ion-label>
+              <ion-radio value="earth" ></ion-radio>
+            </ion-item>
+            </ion-list>
+          
+          
+                
+         
+    
+          <ion-label>3.Which sea creature is known to sometimes eat itself when it becomes unduly stressed?</ion-label>
+       
+          <ion-list radio-group [(ngModel)]="octopus1">
+          <ion-item>
+           <ion-label>Octopus</ion-label>
+          <ion-radio  value="octopus" ></ion-radio>
+        </ion-item>
+          <ion-item>
+          <ion-label>Stamen</ion-label>
+          <ion-radio value="stamen"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Roe</ion-label>
+          <ion-radio value="roe" ></ion-radio>
+        </ion-item>
+      </ion-list>
+      
+    
+      <ion-label>4.Which organ is affected by cirrhosis?</ion-label>
+        
+        
+      <ion-list radio-group [(ngModel)]="liver1">
+        <ion-item>
+          <ion-label>Liver</ion-label>
+          <ion-radio  value="liver" ></ion-radio>
+        
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Langus</ion-label>
+          <ion-radio value="langus"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Kidney</ion-label>
+          <ion-radio value="kidney" ></ion-radio>
+        </ion-item>
+      </ion-list>
+      
+    
+      <ion-label>5.What vitamin in carrots is said to aid vision?</ion-label>
+        
+        
+      <ion-list radio-group [(ngModel)]="vitaminA1">
+        <ion-item>
+            
+          <ion-label>VitaminA</ion-label>
+          <ion-radio  value="vitaminA"  ></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Vitamin B</ion-label>
+          <ion-radio value="VitaminB"></ion-radio>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Vitamin C</ion-label>
+          <ion-radio value="Vitaminc" ></ion-radio>
+        </ion-item>
+      </ion-list>
+      <button ion-button color="light-dark" (click)="onNature()" round>Next</button>
+      </div>
+      
+      <div *ngIf="tech">
+
+          <h1>Technology Quiz </h1>
+        
+          <ion-label>1.For what does the acronym DVD stand?</ion-label>
+          <ion-item>
+              
+              <ion-label>Digital Versatile Disc</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="digital1" value="digitall" ></ion-checkbox>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Data Visual Disc</ion-label>
+              <ion-checkbox value="data" ></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Digital Visual Disc</ion-label>
+                <ion-checkbox value="datata"></ion-checkbox>
+              </ion-item>
+        
+             
+          <ion-label>2.'.TXT' extension refers usually to what kind of file?</ion-label>
+          <ion-item>
+              
+              <ion-label>TextFile</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="TextFile1"  value="TextFile"></ion-checkbox>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Image file</ion-label>
+              <ion-checkbox  value="imgfile"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+                <ion-label>Adobe Acrobat file</ion-label>
+                <ion-checkbox value="Adobe"></ion-checkbox>
+              </ion-item>
+        
+              <ion-label>3.http://www.indiabix.com - is an example of what?</ion-label>
+              <ion-item>
+                  
+                  <ion-label>	AURL</ion-label>
+                  <ion-checkbox color="dark" [(ngModel)]="AURL1" value="AURL" ></ion-checkbox>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>A directory</ion-label>
+                  <ion-checkbox value="ata"></ion-checkbox>
+                </ion-item>
+                <ion-item>
+                    <ion-label>A server</ion-label>
+                    <ion-checkbox value="atat"></ion-checkbox>
+                  </ion-item>
+        
+                  <ion-label>4.What's a web browser?</ion-label>
+                  <ion-item>
+                      
+                      <ion-label>A computer that stores WWW files</ion-label>
+                      <ion-checkbox value=" store" ></ion-checkbox>
+                    </ion-item>
+                    
+                    <ion-item>
+                      <ion-label>A software program that allows you to access sites on the World Wide Web</ion-label>
+                      <ion-checkbox  color="dark" [(ngModel)]="files1" value="www2"  ></ion-checkbox>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>A person who likes to look at websites</ion-label>
+                        <ion-checkbox value="oako" ></ion-checkbox>
+                      </ion-item>
+                      <ion-label>5.'OS' computer abbreviation usually means ?</ion-label>
+                      <ion-item>
+                          
+                          <ion-label>Open Software</ion-label>
+                          <ion-checkbox  value="opns" color="dark" ></ion-checkbox>
+                        </ion-item>
+                        
+                        <ion-item>
+                          <ion-label>OperatingSystem</ion-label>
+                          <ion-checkbox  color="dark" [(ngModel)]="Os1" value="OS"></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Optical Sensor</ion-label>
+                            <ion-checkbox value="opts"></ion-checkbox>
+                          </ion-item>
+                          <button ion-button color="light-dark" (click)="onTech()" round>Next</button>
+                        </div>
+        
+                        <div *ngIf="general">
+                          <h1 >General Quiz </h1>
+                      <ion-list>
+                          <ion-item>
+                            <ion-label>1.	
+                              Hamid Karzai was chosen president of Afghanistan in?</ion-label>
+                            <ion-select [(ngModel)]="president1">
+                              <ion-option  value="gn1" >2000</ion-option>
+                              <ion-option  value="gn2" >2003</ion-option>
+                              <ion-option value="president" >2002</ion-option>
+                              
+                            </ion-select>
+                          </ion-item>                                     
+                        </ion-list>
+                        <ion-list>
+                            <ion-item>
+                              <ion-label>2.Golf player Vijay Singh belongs to which country?</ion-label>
+                              <ion-select [(ngModel)]="fiji1">
+                                <ion-option value="gol">USA</ion-option>
+                                <ion-option value="fiji"  >Fiji</ion-option>
+                                <ion-option value="gofl">UK</ion-option>
+                                
+                              </ion-select>
+                            </ion-item>
+                          </ion-list>
+                          <ion-list>
+                              <ion-item>
+                                <ion-label>3.	
+                                  In which year of First World War Germany declared war on Russia and France?</ion-label>
+                                <ion-select [(ngModel)]="war1">
+                                  <ion-option value="war"  >1914</ion-option>
+                                  <ion-option value="was">1915</ion-option>
+                                  <ion-option value="wae">1916</ion-option>
+                                  
+                                </ion-select>
+                              </ion-item>
+                            </ion-list>
+                            <button ion-button color="light-dark" (click)="onDone()" round >Finish</button>
+                            
+                          
+                            </div>
+
+           
+     
+  
+
+              <div *ngIf="resultt" >  
+                   
+            <p>Name:{{name}}</p>
+            <p>Score:{{score}}</p>
+            <p>Sports:
+              <p>Q1:{{SumoWrestling}}</p>
+              <p>Q2:{{maradona}}</p>
+              <p>Q3:{{Renault}}</p>
+              <p>Q4:{{pirates}}</p>
+              <p>Q5:{{goal}}</p><br>
+
+            <p>Nature:</p>
+                
+                <p>Q1:{{whaleshark}}</p>
+                <p>Q2:{{mars}}</p>
+                <p>Q3:{{octopus}}</p>
+                <p>Q4:{{liver}}</p>
+                <p>Q5:{{vitaminA}}</p>
+               
+
+            <p>Technology:</p>
+                <p>Q1:{{digitall}}</p>
+                <p>Q2:{{OS}}</p>
+                <p>Q3:{{AURL}}</p>
+                <p>Q4:{{www2}}</p>
+                <p>Q5:{{TextFile}}</p>
+                
+
+
+            <p>General:</p>
+                <p>Q1:{{fiji}}</p>
+                <p>Q2:{{war}}</p>
+                <p>Q3:{{president}}</p>
+               
+           
+            
+            
+
+            
+
+            <button ion-button icon-start (click)="onBack()" round > <ion-icon name="home" >Start Over</ion-icon></button>
+            
+           
+              
+           
+         
+            
+          </div> 
+          <footer>
+            <p>Created By MRJ-Holding</p>
+          </footer>
+
+            
+
+        
+
+      
+
 </ion-content>

@@ -1,3 +1,31 @@
 page-home {
+    h1,h2{
+        text-align: center;
+        color: blue;
+        // background-color: aqua;
+        
+    }
+   body{
+       background-image: url("https://thumbs.dreamstime.com/b/d-people-carrying-text-word-quiz-rendering-running-white-person-man-51470783.jpg" );
+       background-repeat: no-repeat;
+       background-size: auto;
+       
+       background-position: center;
+           
+   }
+   footer{
+       
+       margin-top: 120%;
+       margin-left: auto;
+       margin-right: auto;
 
+   }
+   ion-content{
+       background-color: lightgrey  !important;
+   }
+
+   
+   
+ 
+   
 }
