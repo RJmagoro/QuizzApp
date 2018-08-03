@@ -73,34 +73,13 @@ export class HomePage {
   president1:string;
   president:string;
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
   car;
   Year:string;
   yrrs:string;
 
-
-
- 
-  
   
   fott;Jpn;
-  
-  
+   
   gn3;
   First: boolean = false;
   Sports: boolean = false;
@@ -111,7 +90,6 @@ export class HomePage {
   Polotics:boolean = false;
  
   
-
   score = 0 ;
   total = 0;
  
@@ -126,22 +104,14 @@ export class HomePage {
   ps;fot;fote;starr;
 
 
-
-  
-  
-
-
   constructor( public navCtrl: NavController) {
  
     this.First = true;
    
-   
     
     
   }
-
-  
-  
+ 
   
 
   onDone(){
